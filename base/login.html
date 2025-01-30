@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Book | Login</title>
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+<script>
+    function signUp() {
+        let name = document.getElementById("username").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        if (name.trim() === "" || password.trim() === "") {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Store only the name in localStorage for the dashboard display
+        localStorage.setItem("userName", name);
+
+        // Redirect to the dashboard
+        window.location.href = "index.html";
+    }
+</script>
+</script>
+<body>
+    <header class="header">
+        <p class="logo"><br><br><strong>Log In</strong></p>
+    </header>
+    <main>
+        <br><br>
+        <form method="post">
+            <label for="username">username</label>
+            <input type="text" name="username" id="username" required>
+            <br>
+            <br>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+            <br>
+
+            <div class="forgot-password">Forgot password?</div><br>
+
+            <button type="submit">Log in</button>
+        </form>
+
+        <div class="create-account">Don't have an account? <span><a class="next" href="#">Sign Up</a></span></div>
+
+        <div class="or">
+            <div class="line"></div> Or Login with <div class="line"></div>
+        </div>
+
+        <div class="other-login">
+            <a href="https://google.com/"><img src="../assets/gmail.png" alt="google"></a>
+            <a href="https://facebook.com/"><img src="../assets/facebook.png" alt="facebook"></a>
+        </div>
+    </main>
+    <script>
+        document.querySelector(".next").addEventListener("click", function() {
+            window.location.href = "signup.html";
+        });
+    </script>
+</body>
+</html>

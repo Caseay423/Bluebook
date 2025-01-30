@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body{
+            background: gainsboro;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header{
+            width: 100%;
+            height: 25%;
+            color: #000;
+        }
+        
+        .header h2{
+            font-size: 35px;
+            justify-content: center;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        main{
+            height: 645px;
+            background: #fff;
+            border: none;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding: 15px 20px 0;
+        }
+        
+        label{
+            font-family: 'poppins', sans-serif;
+            color: rgb(216, 216, 216);
+            display: block;
+            font-weight: bold;
+            float: left;
+            margin-left: 30px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        input{
+            margin-top: 25px;
+            width: 95%;
+            height: 60px;
+            border: 1px solid gainsboro;
+            border-radius: 15px;
+        }
+        
+        input:hover{
+            border: 1px solid gainsboro;
+        }
+        
+        .forgot-password{
+            float: right;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            margin-right: 35px;
+            color: rgb(216, 216, 216);
+            font-size: 20px;
+            cursor: pointer;
+            transition: .5s ease-in-out;
+        }
+        
+        .forgot-password:hover{
+            color: #1577e7;
+        }
+        
+        button{
+            width: 95%;
+            height: 65px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 15px;
+            outline: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background: #1577e7;
+            cursor: pointer;
+            transition: .5s ease-in-out;
+        }
+        
+        button:hover{
+            color: #000;
+            background: #3588e7;
+        }
+        
+        .create-account{
+            margin-top: 40px;
+            letter-spacing: 1px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .create-account span{
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: #1577e7;
+            cursor: pointer;
+            margin-bottom: 15px;
+            transition: .5s ease-in-out;
+        }
+        
+        .create-account span:hover{
+            color: black;
+        }
+        
+        .or{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .other-login{
+            text-align: center;
+            color: gainsboro;
+            margin-top: 20px;
+            display: inline-flex;
+            white-space: nowrap;
+            overflow: hidden;
+            gap: 60px;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+        
+        .other-login img{
+            width: 40px;
+            height: 40px;
+        }
+        
+        .line{
+            width: 35%;
+            height: 2px;
+            background: gainsboro;
+            display: inline-flex;
+            white-space: nowrap;
+            overflow: hidden;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        @media (max_width: 600px) {
+        
+            .header{
+                justify-content: baseline;
+                position: relative;
+                float: left;
+            }
+        
+            .line{
+                width: 10%;
+            }
+        }
+    </style>
+    <script>
+        function signUp() {
+            let name = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            if (name.trim() === "" || email.trim() === "" || password.trim() === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Store only the name in localStorage for the dashboard display
+            localStorage.setItem("userName", name);
+
+            // Redirect to the dashboard
+            window.location.href = "success.html";
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <br>
+        <br>
+        <br>
+        <center><h2>Sign Up</h2></center>
+    </header>
+    <br>
+    <br>
+    <br>
+   <main>
+    <br>
+    <br>
+    <br>
+    <input type="text" id="username" placeholder="Enter your name"><br><br>
+    <input type="email" id="email" placeholder="Enter your email"><br><br>
+    <input type="password" id="password" placeholder="Enter your password"><br><br>
+    <button onclick="signUp()">Sign Up</button>
+    <div class="create-account">Already Have an account yet <span class="btn">Login</span></div>
+   </main>
+   
+</body>
+<script>
+    document.querySelector(".btn").addEventListener("click", function() {
+        window.location.href = "login.html";
+    });
+</script>
+</html>

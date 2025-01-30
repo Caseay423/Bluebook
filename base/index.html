@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Blue book</title>
+</head>
+<script>
+  window.onload = function () {
+     let storedName = localStorage.getItem("userName");
+     if (storedName) {
+         document.getElementById("user-display").innerText = storedName;
+     }else{
+         document.getElementById("user-display").innerText = "Guest";
+     }
+  };
+
+</script>
+<body>
+    <div class="container">
+        <header class="header">
+            <p class="time">9:41</p>
+            <div class="profile">
+                <span><strong>Hi, <span id="user-display"></span></strong></span>
+                <img src="../assets/profile.png" alt="Profile">
+            </div>
+        </header>
+    </div>
+    <main>
+        <section class="learning-status">
+            <p>Learned Today</p>
+            <h2>46min / 60min</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="my-courses">My Courses</div>
+        </section>
+
+        <section class="learning-options">
+            <h3>What Do you Want to Learn Today?</h3>
+            <button class="get-started">Get Started</button>
+        </section>
+
+        <section class="learning-plan">
+            <h3>Learning Plan</h3>
+            <div class="plan">
+                <p>Packaging Design</p>
+                <span>40/48</span>
+            </div>
+            <div class="plan">
+                <p>Product Design</p>
+                <span>6/24</span>
+            </div>
+        </section>
+
+        <section class="meetup">
+            <h3>Meet Up</h3>
+            <p>Off-line exchange of learning experiences</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <button class="">Home</button>
+        <button class="course">Course</button>
+        <button class="search">Search</button>
+        <button>Message</button>
+        <button>Account</button>
+    </footer>
+    <script src="script/script.js"></script>
+    <script>
+        document.querySelector(".course").addEventListener("click", function() {
+            window.location.href = "course-select.html";
+        });
+
+       document.querySelector(".search").addEventListener("click", function() {
+            window.location.href = "search-filter.html";
+        });
+    </script>
+</body>
+</html>

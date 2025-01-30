@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .video-container {
+      background: #4c6ef5;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .video-container video {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+
+    .details {
+      padding: 20px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+
+    .details h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+
+    .details p {
+      margin: 0 0 20px;
+      color: #666;
+      font-size: 16px;
+    }
+
+    .lessons {
+      list-style: none;
+      padding: 0;
+    }
+
+    .lessons li {
+      background: white;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .buy-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background: #4c6ef5;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      max-width: 200px;
+    }
+
+    span{
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .video-container {
+        padding: 40px;
+      }
+
+      .details {
+        padding: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <h1>Product Design v1.0</h1>
+    <video controls>
+      <source src="../images/XXXTENTACION_-_MOONLIGHT__OFFICIAL_MUSIC_VIDEO_(360p).mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+  </div>
+  <div class="details">
+    <h2>About this Course</h2>
+    <p>Learn the fundamentals of product design in this 24-lesson course.</p>
+    <ul class="lessons">
+      <li>
+        <span class="next">Lesson 1: Welcome</span>
+        <span>6:10 mins</span>
+      </li>
+      <li>
+        <span class="nxt">Lesson 2: Process Overview</span>
+        <span>6:10 mins</span>
+      </li>
+      <li>
+        <span class="net">Lesson 3: Discovery</span>
+        <span>6:10 mins</span>
+      </li>
+    </ul>
+    <a href="#" class="buy-btn">Buy Now - $74.00</a>
+  </div>
+  <script>
+    document.querySelector(".buy-btn").addEventListener("click", function() {
+        window.location.href = "404.html";
+    });
+
+    document.querySelector(".net").addEventListener("click", function() {
+        window.location.href = "no-video.html";
+    });
+
+    document.querySelector(".nxt").addEventListener("click", function() {
+        window.location.href = "no-video.html";
+    });
+
+    document.querySelector(".next").addEventListener("click", function() {
+      window.location.href = "no-video.html";
+  });
+</script>
+</body>
+</html>

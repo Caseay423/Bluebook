@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click</title>
+    <style>
+        .get-started {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="get-started">Get Started</div>
+
+    <script>
+        document.querySelector(".get-started").addEventListener("click", function() {
+            window.location.href = "../intro.html"; // Replace with the actual URL of the next page
+        });
+    </script>
+
+</body>
+</html>
